@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TASK</title>
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+   
+    
+    <body>
+        <div id="app">
+        <nav class="navbar" id="section-1">
+        <h1 class="logo_name">LOGO</h1>
+        <ul>
+            <li><a href="###">Home</a></li>
+            <li><a href="###">About</a></li>
+            <li><a href="###" class="mainpage" style="color: #FFAF42">Project</a></li>
+            <li><a href="###">Contact</a></li>
+        </ul>
+    </nav>
+        <header>
+            <h1>Our</h1>
+            <h1>Projects</h1>
+        </header>
+        <section class="projects">
+            <div class="projects-header">
+                <ul>
+                    <li v-for="project in projects"><a href="###" style="font-weight: bold;color: #FFAF42" class="subpage">Web Design</a></li>
+                    <li v-for="project in projects"><a href="###" style="font-weight: bold;">Mobile App Design</a></li>
+                    <li v-for="project in projects"><a href="###" style="font-weight: bold;">Freebies</a></li>
+                </ul>
+            </div>
+            <div>
+     <transition name="fade">
+        <section v-if="showSection">
+
+            <section class="title">
+    
+    <div class="row">
+        <project-card v-for="project in projects" :key="project.title"
+                      :title="project.title" :study-case-link="project.studyCaseLink"
+                      :live-preview-link="project.livePreviewLink" :image-src="project.imageSrc">
+        </project-card>
+        <div class="col" style=" margin-right: -60px">
+            <div class="image-content">
+            
+            <img src="1.PNG" style="width: 500px; height: 300px; border-radius: 25px; ">
+            
+            </div>
+            <div class="card-content">
+            <h4>Minify - Web Design</h4>
+                <div class="card-footer">
+                <a href="###" style="padding-right: 10px; font-size: 14px; text-decoration: none; color: black"><i class="fa fa-hdd-o"></i>  view study case</a>
+                <a href="###"  style="font-size: 14px; text-decoration: none; color: black"><i class="fa fa-eye"></i>  Live preview</a>
+                </div>
+            </div>
+        </div>
+        <div class="col" style=" margin-left: -60px; margin-right: 80px;">
+            <div class="image-content">
+            
+            <img src="2.PNG" style="width: 500px; height: 300px; border-radius: 25px;">
+            
+            </div>
+            <div class="card-content">
+            <h4 >Ant - Personal Portofolio</h4>
+                <div class="card-footer">
+                <a href="###" style="padding-right: 10px; font-size: 14px; text-decoration: none; color: black"><i class="fa fa-hdd-o"></i>  view study case</a>
+                <a href="#" style="font-size: 14px; text-decoration: none; color: black"><i class="fa fa-eye"></i>  Live preview</a>
+                </div>
+            </div>
+                
+            </div>
+                    </div>
+                    
+        </section>
+                
+<section class="title">
+    
+    <div class="row">
+        <div class="col" style=" margin-right: -60px">
+            <div class="image-content">
+            
+            <img src="3.PNG" style="width: 500px; height: 300px; border-radius: 25px;">
+            
+            </div>
+            <div class="card-content">
+            <h4>Lumy - Dashboard UI Kit</h4>
+                <div class="card-footer">
+                <a href="###" style="padding-right: 10px; font-size: 14px; text-decoration: none; color: black"><i class="fa fa-hdd-o"></i>  view study case</a>
+                <a href="###" style="font-size: 14px; text-decoration: none; color: black"><i class="fa fa-eye"></i>  Live preview</a>
+                </div>
+            </div>
+        </div>
+        <div class="col" style=" margin-left: -60px; margin-right: 80px;">
+            <div class="image-content">
+            
+            <img src="4.PNG" style="width: 500px; height: 300px; border-radius: 25px;">
+            
+            </div>
+            <div class="card-content">
+            <h4 >Keeper - Soccer Site</h4>
+                <div class="card-footer">
+                <a href="###" style="padding-right: 10px; font-size: 14px; text-decoration: none; color: black"><i class="fa fa-hdd-o"></i>  view study case</a>
+                <a href="###" style="font-size: 14px; text-decoration: none; color: black"><i class="fa fa-eye"></i>  Live preview</a>
+                </div>
+            </div>
+                
+            </div>
+                    </div>
+                    
+        </section>
+         </section>
+                </transition>
+            </div>
+        </section>
+        <section class="EmailMe">
+            <div class="Emailcontent">
+            <p style="font-size: 40px; font-weight: bold;">Intersted working</p>
+            <p style="font-size: 40px; font-weight: bold;">with me?</p>
+            </div>
+            <div class="Emailbtn" style="height: 60px;">
+                <button class="btn" v-on:click="sendEmail" ><i class="fa fa-envelope-o"></i>   Email Me</button>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="row2">
+                <div class="footer-col" style="margin-right: 150px;">
+                    <h2>LET'S CONNECT</h2>
+                </div>
+                <div class="footer-col" style="margin-right: 120px;">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+  	 		    </div>
+                <div class="footer-col" style="margin-right: 0; display: flex;">
+                    <a href="#section-1"><span style="font-size: 20px;">Back To Top</span><i class='fas fa-long-arrow-alt-up' style="font-size: 24px; margin-left: 10px; margin-top: 0"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+        </div>
+        <script>
+    var app = new Vue({
+        el: '#app',
+        Vue.component('project-card', {
+        template: '#project-card-template',
+        props: ['title', 'studyCaseLink', 'livePreviewLink', 'imageSrc']
+    });
+        data: {
+            
+            userEmail: '',
+                showSection: true,
+            projects: [
+                { title: 'Minify - Web Design', studyCaseLink: '###', livePreviewLink: '###', imageSrc: '1.PNG' },
+                { title: 'Ant - Personal Portfolio', studyCaseLink: '###', livePreviewLink: '###', imageSrc: '2.PNG' },
+                { title: 'Lumy - Dashboard UI Kit', studyCaseLink: '###', livePreviewLink: '###', imageSrc: '3.PNG' },
+                { title: 'Keeper - Soccer Site', studyCaseLink: '###', livePreviewLink: '###', imageSrc: '4.PNG' }
+            ]
+            
+        }
+        computed: {
+            formattedPageTitle() {
+                return this.pageTitle.toUpperCase();
+            }
+        }
+        
+        methods: {
+            sendEmail() {
+                // Code to send the email
+                console.log('Sending email to: ', this.userEmail);
+            }
+        }
+    });
+</script>
+    </body>
+</html>
